@@ -11,7 +11,7 @@ CBTIS No. 200 · Programación · 3AM PGR · Docente: Mtro. Omar Torres Sánchez
 |-----|------------|
 | Product Owner | (OMAR TORRES SANCHEZ) |
 | Scrum Master | (IAN TADEO RAMIREZ BALLESTEROS) |
-| Equipo de desarrollo | (IAN RAMIREZ) |
+| Equipo de desarrollo | (OSCAR ADRIAN MUÑOZ HERNANDEZ) |
 
 Tablero del proyecto: (pega aquí la liga de tu tablero de GitHub Projects)
 
@@ -19,7 +19,7 @@ Tablero del proyecto: (pega aquí la liga de tu tablero de GitHub Projects)
 
 | HU | Historia | Estado |
 |----|----------|--------|
-| HU-01 | Registrar alumnos (máximo 30) | Terminada |
+| HU-01 | Registrar alumnos (máximo 30, sin nombres repetidos) | Terminada |
 | HU-02 | Capturar calificaciones de 0 a 10 | Terminada |
 | HU-03 | Calcular promedio y estatus (aprueba con 6) | Terminada |
 | HU-04 | Mostrar reporte del grupo | Terminada |
@@ -40,7 +40,7 @@ Si `python` no se reconoce, usa `py src/main.py`.
 python -m unittest discover -s tests -v
 ```
 
-Debe decir **Ran 12 tests** y **OK**.
+Debe decir **Ran 13 tests** y **OK**.
 
 ## Estructura del proyecto
 
@@ -53,8 +53,17 @@ califiapp/
 │   ├── main.py            (menú de consola)
 │   └── calificaciones.py  (lógica de las HU)
 └── tests/
-    └── test_calificaciones.py  (12 pruebas)
+    └── test_calificaciones.py  (13 pruebas)
 ```
+
+##Definicion de terminado (DoD)
+
+Una tarjeta pasa a **Terminado** solo si cumple las 4:
+
+- [] Cumple los criterios de aceptacion de su historia.
+- [] Las pruebas pasan: python -m unittest discover -s tests dice **OK**.
+- [] El copiloto reviso el cambio en el Pull Request.
+- [] El README quedo actualizado.
 
 ## Reglas del equipo para usar Git
 
@@ -67,6 +76,7 @@ califiapp/
 - Nunca borres ni modifiques la carpeta oculta `.git`.
 - Haz `git push` **antes de apagar** o reiniciar la computadora.
 - Antes de empezar a trabajar en equipo, trae lo nuevo con `git pull`.
+- Cada historia se trabaja en su **propia rama** (ejemplo: hu01-nombre-repetido) y entra a main por Pull Request.
 - Cierra tu sesión de GitHub al terminar: la PC del laboratorio es compartida.
 
 Respaldo en la nube: este repositorio en GitHub (público, para que el docente lo revise).
